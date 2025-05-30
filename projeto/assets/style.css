@@ -1,0 +1,288 @@
+@charset "UTF-8";
+
+/* Manter o fundo e layout geral que você já tem */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url('./icons/background02.png');
+    background-size: cover; /* Ajusta para cobrir toda a área */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Não repete a imagem */
+    background-attachment: fixed; /* Mantém fixa ao rolar a página */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Container da página */
+.container {
+    width: 80%;
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1); /* Fundo levemente transparente */
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(8px); /* Adiciona um blur no fundo */
+}
+
+/* Título da página */
+h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-weight: 700;
+    font-size: 2rem;
+    color: #0d6efd; /* Azul vibrante */
+}
+
+/* Estilo da tabela */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    margin-top: 20px;
+}
+
+thead {
+    background: linear-gradient(135deg, #0d6efd, #0056b3);
+    color: white;
+}
+
+thead th, tbody td {
+    padding: 12px 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    text-align: left;
+}
+
+tbody tr:nth-child(even) {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+tbody tr:hover {
+    background: rgba(13, 110, 253, 0.25);
+    cursor: pointer;
+}
+
+tbody td:last-child {
+    text-align: center;
+}
+
+/* Links/botões dentro da tabela */
+tbody a {
+    background-color: #198754; /* Cor do botão de compra */
+    color: white;
+    padding: 8px 14px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+tbody a:hover {
+    background-color: #146c43;
+}
+
+/* Botão Voltar */
+p {
+    text-align: center;
+    margin-top: 20px;
+}
+
+p a {
+    display: inline-block;
+    margin-top: 20px;
+    background-color: #0d6efd;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+p a:hover {
+    background-color: #0056b3;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 720px) {
+    table {
+        font-size: 13px;
+    }
+
+    thead th, tbody td {
+        padding: 8px 10px;
+    }
+
+    p a {
+        padding: 6px 12px;
+    }
+
+    tbody a {
+        padding: 6px 10px;
+    }
+}
+
+/* Mantém o fundo e o layout geral que você já tem */
+section > div {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 40px 40px 40px 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
+    width: 320px;
+}
+
+/* Formulário */
+form label {
+    display: block;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 5px;
+    margin-top: 15px;
+}
+
+form input[type="text"],
+form input[type="password"],
+form input[type="email"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    font-size: 15px;
+    box-sizing: border-box;
+}
+
+input::placeholder {
+    color: #eee;
+}
+
+.sucesso-geral {
+    color: #155724;
+    background-color: rgba(212, 237, 218, 0.8);
+    border: 1px solid #c3e6cb;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-size: 0.95rem;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+    max-width: 250px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.erro-campo {
+    color: #721c24;
+    background-color: rgba(248, 215, 218, 0.85);
+    border: 1px solid #f5c6cb;
+    padding: 10px 15px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 0.95rem;
+    margin: 8px 0 16px 0;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+    max-width: 250px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Estilo para botões login e cadastrar lado a lado */
+.botoes-login-cadastro {
+    display: flex;
+    gap: 12px;
+    margin-top: 15px;
+}
+
+.botoes-login-cadastro button {
+    flex: 1;
+    padding: 10px 0;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+}
+
+/*Botão Login*/
+.botoes-login-cadastro button[type="submit"] {
+    background: linear-gradient(135deg, #0d6efd, #0056b3);
+    color: #fff;
+    box-shadow: 0 6px 20px rgba(13, 110, 253, 0.5);
+}
+
+.botoes-login-cadastro button[type="submit"]:hover {
+    background: linear-gradient(135deg, #0056b3, #003d80);
+    box-shadow: 0 8px 25px rgba(0, 86, 179, 0.7);
+}
+
+/*Botão Cadastrar*/
+.botoes-login-cadastro button[type="button"] {
+    background: #00ff4c88;
+    color: #ddd;
+    box-shadow: 0 4px 13px rgba(68, 86, 71, 0.3);
+}
+
+.botoes-login-cadastro button[type="button"]:hover {
+    background: #0a4e02;
+    box-shadow: 0 6px 20px rgba(59, 47, 47, 0.6);
+}
+
+/* Label gradient text */
+.label-fire {
+    font-weight: bold;
+    font-size: 1.2em;
+    background: linear-gradient(270deg, #ff4500, #ff8c00, #ffff00, #ff4500);
+    background-size: 600% 600%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: fireGradient 3s ease infinite;
+}
+
+@keyframes fireGradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* NOVO: Estilo para botões de ações do admin (Editar, Encerrar, Sortear) */
+.admin-action {
+  background-color: #0d6efd;
+  color: white;
+  padding: 6px 10px;       /* Reduzi o padding para caber melhor */
+  margin: 0 5px 5px 0;     /* Espaçamento entre botões (direita e baixo) */
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.9rem;       /* Tamanho da fonte um pouco menor */
+  display: inline-block;
+  transition: background-color 0.3s ease;
+  white-space: nowrap;     /* Evita quebra dentro do botão */
+}
+
+.admin-action:hover {
+  background-color: #004aad;
+}
+
+
+.admin-action:hover {
+    background-color: #004aad;
+}
+
+td:last-child {
+  white-space: nowrap;
+}
